@@ -418,6 +418,7 @@ public class FramePrincipal extends JFrame {
 				btnBotn.setForeground(new Color(25, 25, 112));
 				btnBotn.setFont(new Font("Bookman Old Style", Font.PLAIN, 14));
 				
+				//Botón BUSCAR y acciones para buscar un producto por su CÓDIGO ÚNICO.
 				
 				JButton btnBuscar = new JButton("Buscar");
 				btnBuscar.addActionListener(new ActionListener() {
@@ -431,13 +432,7 @@ public class FramePrincipal extends JFrame {
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
-						}
-						
-						
-											
-						
-						
-						
+						}					
 					}
 				});
 				btnBuscar.setForeground(new Color(25, 25, 112));

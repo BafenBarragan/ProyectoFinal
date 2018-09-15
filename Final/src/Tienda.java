@@ -57,10 +57,10 @@ public class Tienda {
 		}					
 	}
 
+	//Para buscar un producto por su código único
 	
-public static Producto seleccionarProducto(String cód) throws Exception{
-		
-		
+	public static Producto seleccionarProducto(String cód) throws Exception{
+				
 			String sql = "SELECT NOMBRE, PRECIO, CANTIDAD FROM PRODUCTO WHERE CÓDIGO = '" + cód+ "'"; //String con la instrucción propia de la BD.
 			
 			Statement st = conexión.createStatement();
@@ -84,8 +84,10 @@ public static Producto seleccionarProducto(String cód) throws Exception{
 				throw new Exception("No existe un producto con el código ingresado.");
 			}
 			
-		}
-		
+	}
+	
+	//Para vender ciertas unidades de un producto.
+	
 		public static void vender (String codigo, int cantidad)
 		{
 			try {
@@ -102,6 +104,8 @@ public static Producto seleccionarProducto(String cód) throws Exception{
 					
 		}
 	 
+		//Para comprar ciertas unidades de un producto.
+		
 		public static void comprar (String codigo, int cantidad)
 		{
 			try {
