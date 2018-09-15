@@ -186,10 +186,7 @@ public class FramePrincipal extends JFrame {
 		panelVender.setBounds(580, 50, 433, 157);
 		principal.add(panelVender);
 		
-		vdrCód = new JTextField();
-		vdrCód.setColumns(10);
-		vdrCód.setBounds(97, 41, 242, 20);
-		panelVender.add(vdrCód);
+		// Panel secundario dónde se encuentran los elementos de texto del panel Vender
 		
 		JPanel datosVender = new JPanel();
 		datosVender.setLayout(null);
@@ -197,18 +194,16 @@ public class FramePrincipal extends JFrame {
 		datosVender.setBounds(12, 11, 393, 96);
 		panelVender.add(datosVender);
 		
+		//Labels del panel vender (etiquetas de texto predefinidas)
+		
+
 		JLabel códVdr = new JLabel("C\u00F3digo: ");
 		códVdr.setHorizontalAlignment(SwingConstants.LEFT);
 		códVdr.setForeground(Color.BLUE);
 		códVdr.setFont(new Font("Bookman Old Style", Font.PLAIN, 14));
 		códVdr.setBounds(10, 25, 67, 28);
 		datosVender.add(códVdr);
-		
-		vdrCant = new JTextField();
-		vdrCant.setColumns(10);
-		vdrCant.setBounds(86, 56, 242, 20);
-		datosVender.add(vdrCant);
-		
+				
 		JLabel cantVdr = new JLabel("Cantidad:");
 		cantVdr.setHorizontalAlignment(SwingConstants.LEFT);
 		cantVdr.setForeground(Color.BLUE);
@@ -216,22 +211,37 @@ public class FramePrincipal extends JFrame {
 		cantVdr.setBounds(10, 52, 75, 28);
 		datosVender.add(cantVdr);
 		
+		
+		//Textfields del panel Vender (entrada de texto por el usuario)
+		
+		vdrCód = new JTextField();
+		vdrCód.setColumns(10);
+		vdrCód.setBounds(97, 41, 242, 20);
+		panelVender.add(vdrCód);
+		
+		vdrCant = new JTextField();
+		vdrCant.setColumns(10);
+		vdrCant.setBounds(86, 56, 242, 20);
+		datosVender.add(vdrCant);
+		
+		
+		//PANEL COMPRAR
+		
 		JPanel panelComprar = new JPanel();
 		panelComprar.setLayout(null);
 		panelComprar.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		panelComprar.setBounds(582, 232, 433, 157);
 		principal.add(panelComprar);
 		
-		cprCód = new JTextField();
-		cprCód.setColumns(10);
-		cprCód.setBounds(97, 41, 242, 20);
-		panelComprar.add(cprCód);
+		//Panel Secundario que contiene los objetos de texto del panel comprar 
 		
 		JPanel comprarDatos = new JPanel();
 		comprarDatos.setLayout(null);
 		comprarDatos.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Comprar Productos", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 128)));
 		comprarDatos.setBounds(12, 11, 393, 96);
 		panelComprar.add(comprarDatos);
+		
+		//Etiquetas del panel comprar (texto predefinido)
 		
 		JLabel códCpr = new JLabel("C\u00F3digo: ");
 		códCpr.setHorizontalAlignment(SwingConstants.LEFT);
@@ -240,17 +250,63 @@ public class FramePrincipal extends JFrame {
 		códCpr.setBounds(10, 25, 67, 28);
 		comprarDatos.add(códCpr);
 		
-		cprCant = new JTextField();
-		cprCant.setColumns(10);
-		cprCant.setBounds(86, 56, 242, 20);
-		comprarDatos.add(cprCant);
-		
 		JLabel cantCpr = new JLabel("Cantidad:");
 		cantCpr.setHorizontalAlignment(SwingConstants.LEFT);
 		cantCpr.setForeground(Color.BLUE);
 		cantCpr.setFont(new Font("Bookman Old Style", Font.PLAIN, 14));
 		cantCpr.setBounds(10, 52, 75, 28);
 		comprarDatos.add(cantCpr);
+		
+		//Textfields del panel comprar (texto ingresado por teclado)
+		
+		cprCód = new JTextField();
+		cprCód.setColumns(10);
+		cprCód.setBounds(97, 41, 242, 20);
+		panelComprar.add(cprCód);	
+		
+		cprCant = new JTextField();
+		cprCant.setColumns(10);
+		cprCant.setBounds(86, 56, 242, 20);
+		comprarDatos.add(cprCant);
+		
+		
+		
+		//PANEL DE BÚSQUEDA
+		
+		JPanel panelBuscar = new JPanel();
+		panelBuscar.setLayout(null);
+		panelBuscar.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panelBuscar.setBounds(580, 407, 433, 129);
+		principal.add(panelBuscar);
+		
+		// Panel secundario con elementos de texto de la búsqueda
+		
+		JPanel buscarDatos = new JPanel();
+		buscarDatos.setLayout(null);
+		buscarDatos.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Buscar Producto", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 128)));
+		buscarDatos.setBounds(12, 11, 393, 65);
+		panelBuscar.add(buscarDatos);
+		
+		//Etiquetas de texto para búsqueda
+		
+
+		JLabel códBscr = new JLabel("C\u00F3digo: ");
+		códBscr.setHorizontalAlignment(SwingConstants.LEFT);
+		códBscr.setForeground(Color.BLUE);
+		códBscr.setFont(new Font("Bookman Old Style", Font.PLAIN, 14));
+		códBscr.setBounds(10, 25, 67, 28);
+		buscarDatos.add(códBscr);
+		
+		//TextField para entrada de información por teclado
+		
+		bscrCód = new JTextField();
+		bscrCód.setColumns(10);
+		bscrCód.setBounds(97, 41, 242, 20);
+		panelBuscar.add(bscrCód);
+		
+	
+		
+		
 		
 		//LÍNEAS DE CÓDIGO PARA LOS BOTONES
 		
@@ -362,39 +418,16 @@ public class FramePrincipal extends JFrame {
 				btnBotn.setForeground(new Color(25, 25, 112));
 				btnBotn.setFont(new Font("Bookman Old Style", Font.PLAIN, 14));
 				
-				JPanel panelBuscar = new JPanel();
-				panelBuscar.setLayout(null);
-				panelBuscar.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-				panelBuscar.setBounds(580, 407, 433, 129);
-				principal.add(panelBuscar);
-				
-				bscrCód = new JTextField();
-				bscrCód.setColumns(10);
-				bscrCód.setBounds(97, 41, 242, 20);
-				panelBuscar.add(bscrCód);
-				
-				JPanel buscarDatos = new JPanel();
-				buscarDatos.setLayout(null);
-				buscarDatos.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Buscar Producto", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 128)));
-				buscarDatos.setBounds(12, 11, 393, 65);
-				panelBuscar.add(buscarDatos);
-				
-				JLabel códBscr = new JLabel("C\u00F3digo: ");
-				códBscr.setHorizontalAlignment(SwingConstants.LEFT);
-				códBscr.setForeground(Color.BLUE);
-				códBscr.setFont(new Font("Bookman Old Style", Font.PLAIN, 14));
-				códBscr.setBounds(10, 25, 67, 28);
-				buscarDatos.add(códBscr);
 				
 				JButton btnBuscar = new JButton("Buscar");
 				btnBuscar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						
-						String cód = bscrCód.toString(); 
+						String cód = bscrCód.getText(); 
 						Producto miProducto;
 						try {
 							miProducto = Tienda.seleccionarProducto(cód);
-							JOptionPane.showMessageDialog(null, miProducto);
+							JOptionPane.showMessageDialog(null, miProducto, "Buscar un producto", JOptionPane.INFORMATION_MESSAGE );
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
